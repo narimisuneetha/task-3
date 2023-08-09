@@ -20,6 +20,8 @@
         <logback.version>1.1.3</logback.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <sonar.host.url>http://15.206.178.25:9000</sonar.host.url>
+        <sonar.login>squ_84e77b41cc9c63f0d411f78fc2fc8b3fb85e0c51</sonar.login>
     </properties>
 
     <dependencies>
@@ -119,6 +121,19 @@
     		<scope>test</scope>
 		</dependency>
     </dependencies>
+    <distributionManagement>
+    		<repository>
+      		    <id>nexus</id>
+     		    <name>version-release</name>
+      		    <url>http://3.110.207.69:8081/repository/version-release/</url>
+    		</repository>
+	    
+       		<snapshotRepository>
+      		    <id>nexus</id>
+      		    <name>snapshot-s</name>
+      		    <url>http://3.110.207.69:8081/repository/snapshot-s/</url>
+    		</snapshotRepository>
+    </distributionManagement>
     <build>
         <plugins>
             <plugin>
